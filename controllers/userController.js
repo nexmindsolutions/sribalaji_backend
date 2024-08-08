@@ -3,7 +3,7 @@ const sendRegistrationEmail = require("./../nodeMilerForUser/userNodeMailer");
 
 exports.userForm = async (req, res) => {
   try {
-    const { fullname, email, phone, service, message='Registration Success full' } = req.body;
+    const { fullname, email, phone, service, message='Can You Contact Me' } = req.body;
 
     // Create a new contact document
     const newContact = new Contact({
@@ -31,8 +31,8 @@ exports.userForm = async (req, res) => {
             Registration Successful
           </div>
           <div style="padding: 16px;">
-            <p>Hello ${fullname},</p>
-            <p>Thank you for registering. Your registration details are as follows:</p>
+            <p>Hello,</p>
+            <p>I Want to Talk About Your Services Please Contact Me</p>
             <p><strong>Full Name:</strong> ${fullname}</p>
             <p><strong>Email:</strong> ${email}</p>
             <p><strong>Phone:</strong> ${phone}</p>
